@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body>
+<header>-----</header>
+    <h1>Gallery</h1>
+<div class="container">
+
+        <div class="img-container">
+            <img src="hyem1.jpeg">
+        </div>
+        <div class="img-container">
+            <img src="hyem2.jpeg">
+        </div>
+        <div class="img-container">
+            <img src="hyem3.jpeg">
+        </div>
+        <div class="img-container">
+            <img src="hyem4.jpeg">
+        </div>
+        <div class="img-container">
+            <img src="hyem5.jpeg">
+        </div>
+        <div class="img-container">
+            <img src="hyem6.jpeg">
+        </div>
+
+
+
+    <div class="popup-img">
+        <span>&times;</span>
+        <img src="hyem1.jpeg">
+    </div>
+
+</div>
+
+    <footer></footer>
+
+    <script>
+        document.querySelectorAll('.img-container img').forEach(image =>{
+            image.onclick = () =>{
+            document.querySelector('.popup-img').style.display = 'block'
+            document.querySelector('.popup-img img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-img span').onclick = () =>{
+            document.querySelector('.popup-img').style.display = 'none'
+        }
+    </script>
+</body>
+</html>
